@@ -1,0 +1,7 @@
+/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/chunyi/CLionProjects/h265-server
+-- Boost_INCLUDE_DIRS: /usr/local/include
+-- Boost_LIBRARIES: Boost::system;Boost::filesystem
+-- Boost_VERSION: 1.75.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/chunyi/CLionProjects/h265-server/cmake-build-debug

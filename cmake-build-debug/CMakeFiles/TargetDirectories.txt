@@ -1,0 +1,3 @@
+/home/chunyi/CLionProjects/h265-server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/chunyi/CLionProjects/h265-server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/chunyi/CLionProjects/h265-server/cmake-build-debug/CMakeFiles/h265_server.dir
