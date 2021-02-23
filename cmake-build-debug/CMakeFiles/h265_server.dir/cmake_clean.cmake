@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/h265_server.dir/src/main.cpp.o"
+  "CMakeFiles/h265_server.dir/src/asio.cpp.o"
+  "CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o"
   "h265_server"
   "h265_server.pdb"
 )

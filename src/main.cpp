@@ -81,6 +81,35 @@ int main() {
         std::cerr << "Failed to write header" << std::endl;
         goto error_end;
     }
+    while(true) {
+      AVStream *in_stream, *out_stream;
+      ret = av_read_frame(in_format_ctx, &pkt);
+      if (ret < 0) {
+        break;
+      }
+      // in_format_ctx 是包含多个流的,需要对应好当前package是来自哪个流
+      in_stream = in_format_ctx->streams[pkt->stream_index];
+      if (pkt->stream_index != in_audio_index || pkt->stream_index != in_video_index) {
+        av_packet_free(&pkt);
+        continue;
+      }
+      out_stream = out_format_ctx->streams[pkt->stream_index];
+
+      // copy packet
+      pkt.pts = av_rescale_q_rnd(pkt.pts, in_stream->time_base, out_stream->time_base, AV_ROUND_NEAR_INF|AV_ROUND_PASS_MINMAX);
+      pkt.dts = av_rescale_q_rnd(pkt->dts, in_stream->time_base, out_stream->time_base, AV_ROUND_NEAR_INF|AV_ROUND_PASS_MINMAX);
+      pkt->duration = av_rescale_q(pkt->duration, in_stream->time_base, out_stream->time_base);
+      pkt->pos = -1;
+
+      ret = av_interleaved_write_frame(out_format_ctx, &pkt);
+      if (ret < 0) {
+        std::cerr << "Failed to write frame" << std::endl;
+        break;
+      }
+    }
+
+    av_write_frame(out_format_ctx);
+
     error_end:
     av_dict_free(&in_format_ctx_opts);
     avformat_free_context(in_format_ctx);

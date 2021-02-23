@@ -63,10 +63,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chunyi/CLionProjects/h265-server
+CMAKE_SOURCE_DIR = /home/chunyi.mo/workspace/h265-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chunyi/CLionProjects/h265-server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/chunyi.mo/workspace/h265-server/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/h265_server.dir/depend.make
@@ -77,36 +77,50 @@ include CMakeFiles/h265_server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/h265_server.dir/flags.make
 
-CMakeFiles/h265_server.dir/src/main.cpp.o: CMakeFiles/h265_server.dir/flags.make
-CMakeFiles/h265_server.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chunyi/CLionProjects/h265-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/h265_server.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/h265_server.dir/src/main.cpp.o -c /home/chunyi/CLionProjects/h265-server/src/main.cpp
+CMakeFiles/h265_server.dir/src/asio.cpp.o: CMakeFiles/h265_server.dir/flags.make
+CMakeFiles/h265_server.dir/src/asio.cpp.o: ../src/asio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chunyi.mo/workspace/h265-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/h265_server.dir/src/asio.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/h265_server.dir/src/asio.cpp.o -c /home/chunyi.mo/workspace/h265-server/src/asio.cpp
 
-CMakeFiles/h265_server.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/h265_server.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chunyi/CLionProjects/h265-server/src/main.cpp > CMakeFiles/h265_server.dir/src/main.cpp.i
+CMakeFiles/h265_server.dir/src/asio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/h265_server.dir/src/asio.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chunyi.mo/workspace/h265-server/src/asio.cpp > CMakeFiles/h265_server.dir/src/asio.cpp.i
 
-CMakeFiles/h265_server.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/h265_server.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chunyi/CLionProjects/h265-server/src/main.cpp -o CMakeFiles/h265_server.dir/src/main.cpp.s
+CMakeFiles/h265_server.dir/src/asio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/h265_server.dir/src/asio.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chunyi.mo/workspace/h265-server/src/asio.cpp -o CMakeFiles/h265_server.dir/src/asio.cpp.s
+
+CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o: CMakeFiles/h265_server.dir/flags.make
+CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o: ../src/utils/remuxing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chunyi.mo/workspace/h265-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o -c /home/chunyi.mo/workspace/h265-server/src/utils/remuxing.cpp
+
+CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chunyi.mo/workspace/h265-server/src/utils/remuxing.cpp > CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.i
+
+CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chunyi.mo/workspace/h265-server/src/utils/remuxing.cpp -o CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.s
 
 # Object files for target h265_server
 h265_server_OBJECTS = \
-"CMakeFiles/h265_server.dir/src/main.cpp.o"
+"CMakeFiles/h265_server.dir/src/asio.cpp.o" \
+"CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o"
 
 # External object files for target h265_server
 h265_server_EXTERNAL_OBJECTS =
 
-h265_server: CMakeFiles/h265_server.dir/src/main.cpp.o
+h265_server: CMakeFiles/h265_server.dir/src/asio.cpp.o
+h265_server: CMakeFiles/h265_server.dir/src/utils/remuxing.cpp.o
 h265_server: CMakeFiles/h265_server.dir/build.make
-h265_server: /usr/local/lib/libboost_system.so.1.75.0
-h265_server: /usr/local/lib/libboost_filesystem.so.1.75.0
 h265_server: /usr/local/lib/libavdevice.a
 h265_server: /usr/lib/x86_64-linux-gnu/libm.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb-shm.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb-shape.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so
+h265_server: /usr/lib/x86_64-linux-gnu/libxcb-render.so
 h265_server: /usr/lib/x86_64-linux-gnu/libasound.so
 h265_server: /usr/lib/x86_64-linux-gnu/libSDL2.so
 h265_server: /usr/lib/x86_64-linux-gnu/libsndio.so
@@ -118,11 +132,11 @@ h265_server: /usr/lib/x86_64-linux-gnu/libva.so
 h265_server: /usr/local/lib/libswscale.a
 h265_server: /usr/local/lib/libpostproc.a
 h265_server: /usr/local/lib/libavformat.a
+h265_server: /usr/lib/x86_64-linux-gnu/libbz2.so
 h265_server: /usr/lib/x86_64-linux-gnu/libz.so
 h265_server: /usr/local/lib/libavcodec.a
-h265_server: /usr/lib/x86_64-linux-gnu/libfdk-aac.so
+h265_server: /usr/lib/x86_64-linux-gnu/liblzma.so
 h265_server: /usr/lib/x86_64-linux-gnu/libx264.so
-h265_server: /usr/lib/x86_64-linux-gnu/libx265.so
 h265_server: /usr/local/lib/libswresample.a
 h265_server: /usr/local/lib/libavutil.a
 h265_server: /usr/lib/x86_64-linux-gnu/libva-drm.so
@@ -133,6 +147,7 @@ h265_server: /usr/lib/x86_64-linux-gnu/libxcb.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb-shm.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb-shape.so
 h265_server: /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so
+h265_server: /usr/lib/x86_64-linux-gnu/libxcb-render.so
 h265_server: /usr/lib/x86_64-linux-gnu/libasound.so
 h265_server: /usr/lib/x86_64-linux-gnu/libSDL2.so
 h265_server: /usr/lib/x86_64-linux-gnu/libsndio.so
@@ -144,18 +159,18 @@ h265_server: /usr/lib/x86_64-linux-gnu/libva.so
 h265_server: /usr/local/lib/libswscale.a
 h265_server: /usr/local/lib/libpostproc.a
 h265_server: /usr/local/lib/libavformat.a
+h265_server: /usr/lib/x86_64-linux-gnu/libbz2.so
 h265_server: /usr/lib/x86_64-linux-gnu/libz.so
 h265_server: /usr/local/lib/libavcodec.a
-h265_server: /usr/lib/x86_64-linux-gnu/libfdk-aac.so
+h265_server: /usr/lib/x86_64-linux-gnu/liblzma.so
 h265_server: /usr/lib/x86_64-linux-gnu/libx264.so
-h265_server: /usr/lib/x86_64-linux-gnu/libx265.so
 h265_server: /usr/local/lib/libswresample.a
 h265_server: /usr/local/lib/libavutil.a
 h265_server: /usr/lib/x86_64-linux-gnu/libva-drm.so
 h265_server: /usr/lib/x86_64-linux-gnu/libva-x11.so
 h265_server: /usr/lib/x86_64-linux-gnu/libvdpau.so
 h265_server: CMakeFiles/h265_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chunyi/CLionProjects/h265-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable h265_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chunyi.mo/workspace/h265-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable h265_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/h265_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -168,6 +183,6 @@ CMakeFiles/h265_server.dir/clean:
 .PHONY : CMakeFiles/h265_server.dir/clean
 
 CMakeFiles/h265_server.dir/depend:
-	cd /home/chunyi/CLionProjects/h265-server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chunyi/CLionProjects/h265-server /home/chunyi/CLionProjects/h265-server /home/chunyi/CLionProjects/h265-server/cmake-build-debug /home/chunyi/CLionProjects/h265-server/cmake-build-debug /home/chunyi/CLionProjects/h265-server/cmake-build-debug/CMakeFiles/h265_server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chunyi.mo/workspace/h265-server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chunyi.mo/workspace/h265-server /home/chunyi.mo/workspace/h265-server /home/chunyi.mo/workspace/h265-server/cmake-build-debug /home/chunyi.mo/workspace/h265-server/cmake-build-debug /home/chunyi.mo/workspace/h265-server/cmake-build-debug/CMakeFiles/h265_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/h265_server.dir/depend
 
