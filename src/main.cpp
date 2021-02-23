@@ -11,6 +11,13 @@ typedef  struct BufferData {
     size_t size;
     size_t file_size;
 } ;
+
+static int write_packet(void *opaque, uint8_t *buf, int buf_size) {
+  int fd = *((int *)opaque);
+  int ret = write(fd, buf, buf_size);
+  return ret;
+}
+
 int main() {
     std::cout<< BOOST_LIB_VERSION <<std::endl;
     AVOutputFormat *out_format = NULL;
@@ -24,6 +31,8 @@ int main() {
     char *rtsp_address = "rtsp://127.0.0.1:8554/live";
     in_format_ctx = avformat_alloc_context();
     BufferData db;
+    uint8_t *out_buf = NULL;
+    size_t out_buf_size = 4096;
     if (!in_format_ctx) {
         std::cerr << "Failed to alloc input format context";
         goto error_end;
@@ -38,7 +47,10 @@ int main() {
         std::cerr << "Failed to get stream information" << std::endl;
         goto error_end;
     }
+    // fd 还没有准备好
+    AVIOContext *avio_out = avio_alloc_context(out_buf, out_buf_size, 1, NULL, NULL, write_packet, NULL);
     ret = avformat_alloc_output_context2(&out_format_ctx, NULL, "mp4", NULL);
+    out_format_ctx->pb=avio_out;
     if (ret < 0) {
         std::cerr << "Failed to alloc output context";
         goto error_end;
